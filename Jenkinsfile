@@ -2,10 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage ('Inicio') {
+        stage ('Build') {
             steps {
-                echo 'Init pipe'
+                sh 'mvn -version'
+                sh 'mvn clean install'
             }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
         }
     }
 }
