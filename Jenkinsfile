@@ -2,9 +2,7 @@ pipeline {
     enviroment {
         JAVA_TOOL_OPTIONS = "-Duser.home=/home/jenkins"
     }
-    agent {
-        dockerfile {true}
-    }
+    agent {dockerfile true}
      
     
     stages {
