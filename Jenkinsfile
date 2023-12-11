@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'usermod -a -G docker jenkins'
+                sh 'sudo usermod -a -G docker jenkins'
                 sh 'mvn --version'
                 sh 'mvn clean install'
             }
