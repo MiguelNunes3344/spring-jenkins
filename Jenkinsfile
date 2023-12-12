@@ -3,7 +3,7 @@ pipeline {
     agent { 
         dockerfile {
             label "mestre"
-            args "-v /tmp/maven:/home/jenkins/ -e MAVEN_CONFIG=/home/jenkins/"
+            args "-v /tmp/maven:/tmp/.m2 -e MAVEN_CONFIG=/tmp/.m2"
         }
 
      }
