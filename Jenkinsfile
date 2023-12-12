@@ -12,6 +12,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
+                sh 'ls /opt'
                 sh 'mvn --version'
                 sh 'mvn clean install'
             }
