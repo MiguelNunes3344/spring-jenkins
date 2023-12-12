@@ -13,7 +13,7 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'mvn --version'
-                sh 'chmod -R u+rwX,go+rX,go-w ~/.m2/repository'
+                sh 'mkdir /.m2/repository'
                 sh 'mvn clean install -e -X'
                 
             }
