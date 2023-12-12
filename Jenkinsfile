@@ -13,7 +13,7 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'mvn --version'
-                sh 'mkdir /.m2/repository'
+                sh 'mkdir -p /.m2/repository'
                 sh 'mvn clean install -e -X'
                 
             }
