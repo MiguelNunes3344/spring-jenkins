@@ -15,6 +15,11 @@ pipeline {
                 sh 'mvn --version'
                 sh 'mkdir -p /.m2/repository'
                 sh 'mvn clean install -e -X'
+            }
+        }
+        stage ('Deploy') {
+            steps {
+                sh 'mvn spring-boot:run'
                 
             }
         }
