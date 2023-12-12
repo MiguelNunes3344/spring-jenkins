@@ -12,7 +12,6 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'sudo groupadd docker'
                 sh 'mvn --version'
                 sh 'mvn clean install'
             }
