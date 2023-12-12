@@ -13,8 +13,8 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'mvn --version'
-                sh 'mkdir -p /.m2/repository'
-                sh 'mvn clean install -e -X'
+                sh 'sudo mkdir -p /.m2/repository'
+                sh 'sudo mvn clean install -e -X'
                 
             }
         }
